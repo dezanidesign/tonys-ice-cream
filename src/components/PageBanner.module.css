@@ -1,0 +1,61 @@
+/* Elementor template post 991 */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 205px 30px 23px;
+  background-color: var(--c-primary);
+  text-align: center;
+}
+.title {
+  margin: 0 0 0.54em;
+  color: #fff;
+  font-size: 70px;
+  line-height: 1;
+  text-align: center;
+}
+.crumbs {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.crumbs li + li::before {
+  content: ">";
+  margin: 0 5px;
+}
+.crumbs a {
+  text-decoration: underline;
+}
+.crumbs a:hover {
+  color: var(--c-accent);
+}
+
+@media (max-width: 880px) {
+  .banner {
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+  .title {
+    margin: 0 0 50px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    /* the original used 70px, which sits the title beside the 110px logo; clear the logo instead */
+    padding: 135px 15px 20px;
+  }
+  .title {
+    font-size: 30px;
+  }
+}

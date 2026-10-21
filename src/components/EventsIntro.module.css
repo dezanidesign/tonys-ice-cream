@@ -1,0 +1,50 @@
+/* Elementor container #c2c3232 */
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 145px 80px 0;
+  background-color: #f6f0ea;
+  scroll-margin-top: 20px;
+}
+.heading {
+  padding-bottom: 62px;
+}
+.text {
+  align-self: center;
+  width: 100%;
+  max-width: 844px;
+  margin: 0;
+  padding-bottom: 78px;
+  color: var(--c-text);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+  .section {
+    padding-inline: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 880px) {
+  .section {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .section {
+    padding: 60px 15px 0;
+  }
+  .heading {
+    padding-bottom: 40px;
+  }
+  .text {
+    padding-bottom: 40px;
+  }
+}

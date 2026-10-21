@@ -1,0 +1,237 @@
+/* Contact page – Elementor post 22 */
+.intro {
+  padding: 57px 0 0;
+  background-color: #fff;
+}
+.introInner {
+  display: flex;
+}
+.introText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 115px;
+}
+.introTitle {
+  margin: 0 0 20px;
+  color: var(--c-primary);
+  font-size: 50px;
+  line-height: 54px;
+}
+.introText p {
+  margin: 0;
+}
+
+.main {
+  position: relative;
+  margin: -40px 0 150px;
+  background-color: #f6f0ea;
+}
+.white {
+  position: absolute;
+  right: 0;
+  bottom: -179px;
+  left: 0;
+  min-height: 470px;
+  background-color: #fff;
+}
+
+.row {
+  position: relative;
+  display: flex;
+}
+.card {
+  width: 50%;
+  margin-top: -60px;
+  padding: 61px 80px 75px;
+  border-radius: 20px 80px 20px 80px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+}
+.formTitle {
+  margin: 0 0 0.54em;
+  color: var(--c-primary);
+  font-size: 40px;
+}
+
+.details {
+  width: 50%;
+  padding: 83px 0 0 110px;
+}
+.detailsTitle {
+  margin: 0 0 0.54em;
+  color: var(--c-primary);
+  font-size: 40px;
+  line-height: 44px;
+  text-transform: capitalize;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-style: normal;
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 58%;
+}
+.office {
+  max-width: 64%;
+}
+.icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--c-accent);
+  transition: all 0.3s ease;
+}
+.item:hover .icon,
+.item:focus-within .icon {
+  background-color: var(--c-accent);
+  color: #fff;
+}
+.itemTitle {
+  margin: 0 0 6px;
+  color: var(--c-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.itemText {
+  margin: 0;
+  line-height: 28px;
+}
+.itemText a:hover {
+  color: var(--c-primary);
+}
+.phone {
+  color: var(--c-primary);
+  font-size: 20px;
+}
+
+.map {
+  position: relative;
+  z-index: 3;
+  margin-top: 100px;
+}
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: 0;
+  border-radius: 20px;
+  filter: brightness(1.05) saturate(0);
+}
+
+@media (max-width: 1200px) {
+  .introInner {
+    padding: 50px 30px 0;
+  }
+  .intro {
+    padding-top: 0;
+  }
+  .introText {
+    margin-bottom: 100px;
+  }
+  .main {
+    margin: 0 0 100px;
+  }
+  .row {
+    padding: 0 30px;
+  }
+  .details {
+    padding: 80px 0 0 80px;
+  }
+  .item {
+    max-width: 60%;
+  }
+  .map {
+    padding-inline: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .card {
+    padding: 50px 30px;
+  }
+  .details {
+    padding: 60px 0 0 60px;
+  }
+  .item,
+  .office {
+    max-width: 70%;
+  }
+}
+@media (max-width: 880px) {
+  .main {
+    margin-bottom: 80px;
+  }
+  .details {
+    padding: 40px 0 0 40px;
+  }
+  .office {
+    max-width: 95%;
+  }
+  .item {
+    max-width: 96%;
+  }
+}
+@media (max-width: 767px) {
+  .introInner {
+    padding: 50px 15px 0;
+  }
+  .introText {
+    margin-bottom: 60px; /* original: 0 – the form card (-30px margin) then covered the last line of text */
+    text-align: center;
+  }
+  .introTitle {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .main {
+    margin-top: 0;
+  }
+  .row {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .card {
+    width: 100%;
+    margin-top: -30px;
+    padding: 40px 25px 45px;
+  }
+  .formTitle,
+  .detailsTitle {
+    font-size: 35px;
+  }
+  .details {
+    width: 100%;
+    padding: 40px 0 0;
+  }
+  .detailsTitle {
+    text-align: center;
+  }
+  .list {
+    align-items: center;
+  }
+  .item,
+  .office {
+    gap: 10px;
+    max-width: 77%;
+  }
+  .map {
+    margin-top: 60px;
+    padding-inline: 15px;
+  }
+  .map iframe {
+    height: 400px;
+  }
+}

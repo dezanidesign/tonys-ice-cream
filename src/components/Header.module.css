@@ -1,0 +1,218 @@
+/*
+ * Elementor header template (post 32): full-width absolute container, 3 columns
+ *   13.5% / 73% / 13.5%  (≥1441)  ·  20 / 60 / 20 (768–1440)  ·  40 / 30 / 30 (881–1024)  ·  30 / 35 / 35 (768–880)
+ *   ≤767: logo 50% | menu button 50%
+ */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 996;
+  display: flex;
+  padding: 0 80px;
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 15px;
+  }
+}
+
+.logoCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 13.5%;
+}
+.navCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 73%;
+}
+.callCol {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 11px;
+  min-width: 13.5%;
+}
+
+@media (max-width: 1440px) {
+  .logoCol {
+    width: 20%;
+  }
+  .navCol {
+    width: 60%;
+  }
+  .callCol {
+    min-width: 20%;
+  }
+}
+@media (max-width: 1024px) {
+  .logoCol {
+    width: 40%;
+    order: 1;
+  }
+  .navCol {
+    width: 30%;
+    order: 0;
+  }
+  .callCol {
+    min-width: 30%;
+    order: 2;
+  }
+}
+@media (max-width: 880px) {
+  .logoCol {
+    width: 30%;
+  }
+  .navCol {
+    width: 35%;
+  }
+  .callCol {
+    min-width: 35%;
+  }
+}
+@media (max-width: 767px) {
+  .logoCol {
+    width: 50%;
+    order: 0;
+  }
+  .navCol {
+    width: 50%;
+    order: 1;
+    align-items: flex-end;
+  }
+  .callCol {
+    display: none;
+  }
+}
+
+/* Logo: "Max width 70%" of its column (hfe-site-logo space setting) */
+.logo {
+  display: block;
+  width: 70%;
+  margin: 0;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  .logo {
+    align-self: center;
+    width: 70%;
+    max-width: 180px;
+  }
+}
+@media (max-width: 767px) {
+  .logo {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 110px;
+  }
+}
+
+/* Primary navigation: 20px display, lowercase, 48px vertical padding, diamond separators */
+.mainNav {
+  display: none;
+  text-align: left;
+}
+@media (min-width: 1025px) {
+  .mainNav {
+    display: block;
+  }
+}
+@media (max-width: 1440px) {
+  .mainNav {
+    text-align: center;
+  }
+}
+.mainNav ul {
+  display: block;
+}
+.mainNav li {
+  position: relative;
+  display: inline-block;
+}
+.mainNav a {
+  position: relative;
+  display: block;
+  margin: 0 8px;
+  padding: 48px 0;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: lowercase;
+}
+.mainNav li:not(:last-child) a::after {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-left: 18px;
+  vertical-align: middle;
+  background-color: #fff;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+  -webkit-mask: url("/images/theme/sparkle.svg") center / contain no-repeat;
+  mask: url("/images/theme/sparkle.svg") center / contain no-repeat;
+}
+.mainNav a:hover::after,
+.mainNav a[aria-current="page"]::after {
+  opacity: 1;
+}
+
+/* call us · phone · Facebook */
+.callLabel {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.phone {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.phoneIcon {
+  margin-right: 9px;
+  color: var(--c-accent);
+}
+.phone:hover {
+  color: var(--c-accent);
+}
+/* Elementor default "official colour" social icon: 25px glyph in a 50px rounded square */
+.facebook {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background-color: #3b5998;
+  color: #fff;
+}
+.facebook:hover {
+  opacity: 0.9;
+}

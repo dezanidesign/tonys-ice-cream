@@ -1,0 +1,18 @@
+.section {
+  padding: 102px 30px 109px;
+  background: #fff;
+}
+.section > * {
+  max-width: 1410px;
+  margin-inline: auto;
+}
+@media (max-width: 880px) {
+  .section {
+    padding: 80px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .section {
+    padding: 60px 15px;
+  }
+}

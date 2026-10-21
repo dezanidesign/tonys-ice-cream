@@ -1,0 +1,31 @@
+.top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--c-accent);
+  color: #fff;
+  transform: scale(0);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+.visible {
+  transform: scale(1);
+}
+.top:hover {
+  background-color: var(--c-tertiary);
+}
+@media (max-width: 767px) {
+  .top {
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" role="img" aria-label="Tony's Ice Cream">
+  <circle cx="150" cy="150" r="146" fill="#09574A"/>
+  <circle cx="150" cy="150" r="132" fill="none" stroke="#EBC6A4" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/>
+  <g transform="translate(150 92)" fill="none" stroke="#EBC6A4" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-26 0 L0 66 L26 0 Z" fill="#EBC6A4" fill-opacity=".35"/>
+    <path d="M-26 0 C-40 0 -40 -30 -20 -30 C-20 -50 20 -50 20 -30 C40 -30 40 0 26 0 Z" fill="#fff" fill-opacity=".9"/>
+  </g>
+  <text x="150" y="196" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="#fff">Tony's</text>
+  <text x="150" y="232" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="5" fill="#EBC6A4">ICE CREAM</text>
+</svg>

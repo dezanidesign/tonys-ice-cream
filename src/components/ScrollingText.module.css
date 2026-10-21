@@ -1,0 +1,67 @@
+/* Elementor container #969dc89 + theme ".slider-style-1" – hidden ≤880px on the original */
+.section {
+  overflow: hidden;
+  padding: 220px 30px;
+  background-color: #10302a; /* stands in for the dimmed background video */
+}
+@media (max-width: 1024px) {
+  .section {
+    padding-block: 100px;
+  }
+}
+@media (max-width: 880px) {
+  .section {
+    display: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  white-space: nowrap;
+}
+.strip {
+  position: relative;
+  display: inline-flex;
+  animation: scrolling 25s linear infinite;
+}
+.item {
+  display: flex;
+  align-items: center;
+}
+.leaf {
+  display: inline-block;
+  position: relative;
+  flex: none;
+  width: 24px;
+  height: 29px;
+  background-color: var(--c-accent);
+  -webkit-mask: url("/images/theme/leaf-left.svg") center / 100% no-repeat;
+  mask: url("/images/theme/leaf-left.svg") center / 100% no-repeat;
+}
+.word {
+  display: block;
+  margin: 0 48px;
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: 100px;
+  line-height: 1;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px var(--c-accent);
+}
+@media (max-width: 568px) {
+  .word {
+    margin: 0 30px;
+    font-size: 40px;
+  }
+}
+
+@keyframes scrolling {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .strip {
+    animation: none;
+  }
+}

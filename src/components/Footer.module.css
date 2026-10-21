@@ -1,0 +1,219 @@
+/* Footer – Elementor template post 34 */
+.footer {
+  position: relative;
+  z-index: 3;
+  background-color: var(--c-primary);
+  color: #fff;
+}
+.inner {
+  background-color: #09574a;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  padding: 54px 0 45px;
+}
+.logo {
+  display: block;
+  width: 140px;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 63px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.find {
+  width: 17%;
+}
+.contact {
+  width: 13%;
+}
+.tagline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+}
+.tagline p {
+  max-width: 332px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.colTitle {
+  margin: 0 0 0.54em;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: capitalize;
+}
+.colText {
+  max-width: 47%;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+}
+.contact .colText {
+  max-width: none;
+}
+.strong {
+  font-weight: 600;
+}
+.colText a:hover {
+  color: var(--c-accent);
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 52px;
+}
+.copy {
+  margin: 0;
+  color: #b9d0cb; /* original #999 / #87A8A2 fall below 4.5:1 on the green */
+  font-size: 14px;
+  line-height: 28px;
+}
+.follow {
+  display: flex;
+  align-items: center;
+}
+.followLabel {
+  margin-right: 8px;
+  color: #b9d0cb;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10%;
+  color: #b9d0cb;
+  transition: color 0.3s ease;
+}
+.social:hover {
+  color: var(--c-accent);
+}
+
+@media (max-width: 1200px) {
+  .row {
+    padding: 0 30px;
+  }
+  .find,
+  .contact {
+    width: 15%;
+  }
+  .colText {
+    max-width: 58%;
+  }
+  .bottom {
+    padding: 30px 30px 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .row {
+    margin-bottom: 50px;
+  }
+  .find {
+    width: 14%;
+  }
+  .contact {
+    width: 18%;
+  }
+  .tagline {
+    width: 36%;
+  }
+  .colText {
+    max-width: 82%;
+  }
+  .tagline p {
+    max-width: 77%;
+  }
+  .bottom {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 880px) {
+  .top {
+    padding: 45px 0 40px;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .find {
+    width: 25%;
+  }
+  .contact {
+    width: 67%;
+  }
+  .tagline {
+    width: 50%;
+  }
+  .tagline p {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    text-align: center;
+  }
+  .find,
+  .contact,
+  .tagline {
+    width: 100%;
+    align-items: center;
+  }
+  .find {
+    margin-bottom: 30px;
+  }
+  .contact {
+    margin-bottom: 30px;
+  }
+  .colText {
+    max-width: none;
+    text-align: center;
+  }
+  .tagline p {
+    max-width: 96%;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 6px;
+    padding: 30px 15px;
+    text-align: center;
+  }
+  .follow {
+    justify-content: center;
+  }
+}
