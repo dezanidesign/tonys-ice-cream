@@ -19,5 +19,5 @@ export const SECTIONS = {
    * Elementor CSS (post-991) behind a 40% black overlay. Looks odd on an ice cream site – set false for a plain
    * green banner.
    */
-  pageBannerPhoto: true,
+  pageBannerPhoto: false,
 } as const;

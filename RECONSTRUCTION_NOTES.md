@@ -84,7 +84,7 @@ Template artwork (from the Catera files Tony's pages reference): `hero-badge.png
 ## Questionable demo content – decide what stays
 
 *Kept (faithful to Tony's live site):*
-- **Page banner photo** – a Catera stock shot of a tattooed chef plating food, behind the title on About/Contact/Gallery. Tony's CSS still uses it. Turn off with `SECTIONS.pageBannerPhoto = false` (`src/lib/sections.ts`) for a plain green banner.
+- **Page banner photo** – a Catera stock shot of a tattooed chef plating food, behind the title on About/Contact/Gallery. Tony's CSS still used it; **switched off by request** (`SECTIONS.pageBannerPhoto = false` in `src/lib/sections.ts`; set `true` to match the original).
 - **Hero badge text "EXQUISITE CATERING SERVICES"** – baked into the Catera ring image (`public/images/theme/hero-badge.png`). Replace the file or remove the `<Image>` in `Hero.tsx`.
 - **Footer tagline** "Let's create unforgettable moments with exceptional catering!" – Catera copy.
 - **Two logos exist.** The site used `Tonys-Ice-Cream-Logo.png` ("ICE CREAMS", "19 79"). A newer `Tonys-Logo-V2-1.png` ("ICE CREAM", "20 02") is in the same media library and was used for the WordPress favicon. Which is current? (Swap in `src/lib/images.ts`.)
