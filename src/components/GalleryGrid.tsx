@@ -52,7 +52,7 @@ export function GalleryGrid({ images, filters }: Props) {
 
       <ul className={styles.grid}>
         {images.map((img, i) => (
-          <li key={img.original} className={styles.item}>
+          <li key={img.src} className={styles.item}>
             <button
               type="button"
               className={styles.thumb}
@@ -68,7 +68,6 @@ export function GalleryGrid({ images, filters }: Props) {
                   alt={img.alt}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 880px) 50vw, 33vw"
-                  unoptimized={img.src.endsWith(".svg")}
                   style={{ objectFit: "cover" }}
                   loading={i < 3 ? "eager" : "lazy"}
                 />
@@ -153,7 +152,6 @@ function Lightbox({
           width={img.width}
           height={img.height}
           sizes="90vw"
-          unoptimized={img.src.endsWith(".svg")}
           className={styles.lbImage}
         />
         <p className={styles.lbCount} aria-live="polite">

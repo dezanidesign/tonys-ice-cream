@@ -4,7 +4,7 @@ import styles from "./Photo.module.css";
 
 /**
  * Renders a registry image at its intended aspect ratio with object-fit: cover, so the crop is
- * identical whether the real photo or the placeholder is in place (and whatever size the real
+ * identical whatever size the source file is (the real
  * file turns out to be).
  */
 export function Photo({
@@ -30,7 +30,6 @@ export function Photo({
         fill
         sizes={sizes}
         priority={priority}
-        unoptimized={img.src.endsWith(".svg")}
         style={{ objectFit: fit, objectPosition: position }}
       />
     </span>

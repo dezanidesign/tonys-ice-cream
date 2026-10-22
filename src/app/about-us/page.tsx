@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { PageBanner } from "@/components/PageBanner";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Testimonials } from "@/components/Testimonials";
 import { about, aboutTestimonials } from "@/lib/content";
+import { images } from "@/lib/images";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = pageMetadata({
@@ -21,6 +23,14 @@ export default function AboutPage() {
       <PageBanner title="About Us" />
 
       <section className={styles.intro} aria-labelledby="about-title">
+        <Image
+          className={styles.introBg}
+          src={images.aboutIntro.src}
+          alt=""
+          fill
+          sizes="960px"
+          unoptimized
+        />
         <div className={styles.card}>
           <SectionHeading
             as="h2"
@@ -53,6 +63,8 @@ export default function AboutPage() {
       </section>
 
       <section className={styles.closing}>
+        <Image className={styles.closingBg} src={images.aboutClosing.src} alt="" fill sizes="100vw" />
+        <span className={styles.closingVeil} aria-hidden="true" />
         <SectionHeading
           as="h2"
           size="xxl"

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { guarantee } from "@/lib/content";
-import { images, theme } from "@/lib/images";
-import { SECTIONS } from "@/lib/sections";
+import { images } from "@/lib/images";
 import { site } from "@/lib/site";
 import { Button } from "./Button";
 import { Icon } from "./Icon";
@@ -13,20 +12,14 @@ import styles from "./Guarantee.module.css";
 export function Guarantee() {
   const decor = images.satisfactionDecor;
   return (
-    <section
-      className={styles.section}
-      style={SECTIONS.guaranteeFoodBackdrop ? { backgroundImage: `url(${theme.guaranteedWaves})` } : undefined}
-      aria-labelledby="guarantee-title"
-    >
+    <section className={styles.section} aria-labelledby="guarantee-title">
       <div className={styles.inner}>
         <SectionHeading
           subtitle={guarantee.subtitle}
           title={<span id="guarantee-title">{guarantee.title}</span>}
           className={styles.heading}
         />
-        {decor.src && (
-          <Image className={styles.decor} src={decor.src} alt="" width={370} height={294} />
-        )}
+        <Image className={styles.decor} src={decor.src} alt="" width={370} height={294} sizes="370px" />
 
         <ul className={styles.row}>
           {guarantee.items.map((item) => (
@@ -41,7 +34,7 @@ export function Guarantee() {
         </ul>
 
         <div className={styles.photo}>
-          <Photo img={images.satisfaction} sizes="(max-width: 600px) 100vw, 561px" />
+          <Photo img={images.hygieneRating} sizes="206px" />
         </div>
 
         <p className={styles.call}>

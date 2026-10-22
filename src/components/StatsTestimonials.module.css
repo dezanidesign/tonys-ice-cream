@@ -25,7 +25,7 @@
 .decor {
   position: absolute;
   bottom: -62%;
-  left: -18%;
+  left: -22%;
   z-index: 1;
   max-width: none;
   pointer-events: none;
@@ -59,8 +59,7 @@
     padding: 80px 40px 0;
   }
   .decor {
-    left: -50%;
-    bottom: -73%;
+    display: none; /* hidden on tablet-extra and below in the original */
   }
 }
 @media (max-width: 1024px) {

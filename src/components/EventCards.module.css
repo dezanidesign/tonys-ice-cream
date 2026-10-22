@@ -9,15 +9,32 @@
   gap: 30px;
 }
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 1010px;
   padding: 60px 20px 40px;
+  overflow: hidden;
   border-radius: 20px;
   background-color: var(--c-primary);
   color: #fff;
+}
+.bg {
+  object-fit: cover;
+  object-position: center;
+}
+.veil {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: border-radius 0.3s ease;
+}
+.title,
+.arch,
+.archFlip {
+  position: relative;
 }
 .title {
   margin: 0;

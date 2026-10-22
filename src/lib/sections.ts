@@ -15,9 +15,9 @@ export const SECTIONS = {
   /** "Corporate / Festivals / Weddings & Birthdays / School Events" photo cards under "Events We Cater". */
   eventCards: true,
   /**
-   * The wave/food artwork behind the bottom of "Satisfaction Guaranteed" (h1-guaranteed.png). It is a Catera
-   * stock photo of pots of rice and tomatoes that the Tony's CSS very likely still referenced; on an ice cream
-   * site it is almost certainly demo residue. Kept for fidelity – set to false to drop it.
+   * Inner-page title banner photo: a Catera stock shot of a tattooed chef plating food, still referenced by Tony's
+   * Elementor CSS (post-991) behind a 40% black overlay. Looks odd on an ice cream site – set false for a plain
+   * green banner.
    */
-  guaranteeFoodBackdrop: true,
+  pageBannerPhoto: true,
 } as const;

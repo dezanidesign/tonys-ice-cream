@@ -16,7 +16,7 @@ export function StatsTestimonials() {
     <section className={styles.band} aria-label="Why choose Tony's">
       <div className={styles.stats} style={{ backgroundImage: `url(${theme.statsWaves})` }}>
         {decor.src && (
-          <Image className={styles.decor} src={decor.src} alt="" width={decor.width} height={decor.height} />
+          <Image className={styles.decor} src={decor.src} alt="" width={decor.width} height={decor.height} sizes="500px" />
         )}
         {stats.map((s, i) => (
           <div key={s.label} className={i === 0 ? styles.stat1 : styles.stat}>

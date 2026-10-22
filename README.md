@@ -40,14 +40,11 @@ See [`.env.example`](./.env.example).
 To use a different mail provider, replace the body of `sendEnquiry()` in
 [`src/lib/send-enquiry.ts`](./src/lib/send-enquiry.ts) – nothing else changes.
 
-## Restoring Tony's photos
+## Images
 
-The original photos were never archived (see the notes). Copy each file – **using its original filename** –
-into [`public/images/tonys/`](./public/images/tonys/) and rebuild. The registry in
-[`src/lib/images.ts`](./src/lib/images.ts) lists every expected filename and size; real files override the
-placeholders automatically and keep the original crops. Needed: the logo (`Tonys-Ice-Cream-Logo.png`), hero photo
-(`f664199f-…-1.jpg`), the "Satisfaction" photo (`97466962-….jpg`), the decorative cut-outs (`pngegg.png`,
-`pngegg-1.png`, `Ice-Cream.png`) and the eleven gallery photos. Replace `src/app/icon.svg` with a real favicon too.
+Tony's real photos, logo and artwork are in [`public/images/tonys/`](./public/images/tonys/) under their original filenames; every path is listed in
+[`src/lib/images.ts`](./src/lib/images.ts). To swap one, replace the file or change its `src` there. The browser-tab icons are
+`src/app/icon.png` and `src/app/apple-icon.png`.
 
 ## Project map
 
@@ -56,7 +53,7 @@ src/app/                 routes: / · /about-us/ · /gallery/ · /contact/ · /a
 src/components/          Header, MobileNav, Hero, StatsTestimonials, EventsIntro, Guarantee, ScrollingText,
                          Testimonials, Counter, GalleryGrid (+lightbox), ContactForm, Footer, …
 src/lib/site.ts          business details + navigation        src/lib/content.ts   page copy (verbatim from the archive)
-src/lib/images.ts        image registry / placeholders        src/lib/sections.ts  switches for hidden-in-original sections
+src/lib/images.ts        image registry        src/lib/sections.ts  switches for hidden-in-original sections
+public/images/tonys/     Tony's photos + logo (recovered from the old server)
 public/images/theme/     artwork copied from the Catera template (waves, divider, hero badge, leaf ornaments)
-scripts/                 generate-placeholders.mjs
 ```

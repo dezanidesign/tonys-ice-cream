@@ -1,12 +1,19 @@
 /* About page – Elementor post 23 (demo CSS for the same element ids) */
 .intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 100px 315px 100px 30px;
   background-color: var(--c-primary);
 }
+/* Tony's CSS: his photo as the band's left-hand background, natural size, centred vertically, no repeat */
+.introBg {
+  object-fit: none;
+  object-position: center left;
+}
 .card {
+  position: relative;
   width: 630px;
   max-width: 100%;
   padding: 90px 110px 86px;
@@ -46,7 +53,18 @@
 }
 
 .closing {
-  background-color: #0e3d34; /* stands in for the dimmed "about-bg" photo + 60% black overlay */
+  position: relative;
+  overflow: hidden;
+  background-color: #0e3d34;
+}
+.closingBg {
+  object-fit: cover;
+  object-position: center;
+}
+.closingVeil {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .closingHeading h2 {
   color: rgba(235, 198, 164, 0);
@@ -60,6 +78,7 @@
   color: var(--c-accent);
 }
 .closingHeading {
+  position: relative;
   padding: 170px 30px 180px;
 }
 .closingHeading > div:first-child {
@@ -87,6 +106,9 @@
   }
 }
 @media (max-width: 767px) {
+  .introBg {
+    display: none; /* Tony's CSS: background-size 0% on phones */
+  }
   .intro {
     padding: 50px 15px;
   }

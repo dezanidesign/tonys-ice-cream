@@ -7,6 +7,31 @@
   background-color: var(--c-primary);
   text-align: center;
 }
+.photo {
+  position: relative;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.photo > * {
+  position: relative;
+}
+@media (min-width: 1441px) {
+  .photo {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 1024px) {
+  .photo {
+    background-position: 0% 0%;
+  }
+}
 .title {
   margin: 0 0 0.54em;
   color: #fff;

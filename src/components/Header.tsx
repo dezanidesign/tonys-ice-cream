@@ -18,14 +18,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.logoCol}>
         <Link href="/" className={styles.logo} aria-label={`${site.name} – home`}>
-          <Image
-            src={logo.src}
-            alt=""
-            width={logo.width}
-            height={logo.height}
-            priority
-            unoptimized={logo.src.endsWith(".svg")}
-          />
+          <Image src={logo.src} alt="" width={logo.width} height={logo.height} sizes="180px" priority />
         </Link>
       </div>
 
@@ -47,7 +40,7 @@ export function Header() {
           rel="noopener noreferrer"
           aria-label="Tony's Ice Cream on Facebook (opens in a new tab)"
         >
-          <Icon name="facebook" size={25} />
+          <Icon name="facebook" size={16} />
         </a>
       </div>
     </header>

@@ -42,11 +42,11 @@
 }
 .callCol {
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   align-items: center;
   justify-content: flex-end;
   gap: 11px;
-  min-width: 13.5%;
+  width: 25%; /* Tony's override of the template's 13.5% (post-32: #e513e8c) */
 }
 
 @media (max-width: 1440px) {
@@ -57,7 +57,9 @@
     width: 60%;
   }
   .callCol {
-    min-width: 20%;
+    width: 20%;
+    flex-shrink: 0;
+    min-width: max-content;
   }
 }
 @media (max-width: 1024px) {
@@ -70,7 +72,7 @@
     order: 0;
   }
   .callCol {
-    min-width: 30%;
+    width: 30%;
     order: 2;
   }
 }
@@ -82,7 +84,7 @@
     width: 35%;
   }
   .callCol {
-    min-width: 35%;
+    width: 35%;
   }
 }
 @media (max-width: 767px) {
@@ -129,6 +131,7 @@
 /* Primary navigation: 20px display, lowercase, 48px vertical padding, diamond separators */
 .mainNav {
   display: none;
+  margin-left: 20px; /* Tony's nav widget margin (post-32: #a853989) */
   text-align: left;
 }
 @media (min-width: 1025px) {
@@ -190,7 +193,7 @@
   display: inline-flex;
   align-items: center;
   color: #fff;
-  font-size: 14px;
+  font-size: 20px; /* Tony's override (14px in the template) */
   font-weight: 600;
   line-height: 18px;
   white-space: nowrap;
@@ -202,13 +205,13 @@
 .phone:hover {
   color: var(--c-accent);
 }
-/* Elementor default "official colour" social icon: 25px glyph in a 50px rounded square */
+/* Elementor "official colour" social icon at Tony's 16px size: glyph in a 32px rounded square (post-32: #020bf1f) */
 .facebook {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border-radius: 10%;
   background-color: #3b5998;
   color: #fff;

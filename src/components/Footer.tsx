@@ -19,7 +19,7 @@ export function Footer() {
       <div className={`boxed ${styles.inner}`}>
         <div className={styles.top}>
           <Link href="/" className={styles.logo} aria-label={`${site.name} – home`}>
-            <Image src={logo.src} alt="" width={logo.width} height={logo.height} unoptimized={logo.src.endsWith(".svg")} />
+            <Image src={logo.src} alt="" width={logo.width} height={logo.height} sizes="120px" />
           </Link>
         </div>
 

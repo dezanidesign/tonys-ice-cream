@@ -1,8 +1,6 @@
-/* Elementor container #c5b68a0 – white, boxed 1210px, wave artwork along the bottom */
+/* Elementor container #c5b68a0 – plain white, boxed 1210px (Tony's CSS dropped the template's wave/food backdrop) */
 .section {
   background-color: #fff;
-  background-position: bottom center;
-  background-repeat: no-repeat;
   padding: 0 30px;
 }
 .inner {
@@ -28,7 +26,7 @@
   left: -4%;
   width: 370px;
   height: 294px;
-  object-fit: contain;
+  object-fit: contain; /* the original stretched the 500×500 cut-out into 370×294 */
   pointer-events: none;
 }
 @media (max-width: 1024px) {
@@ -72,14 +70,12 @@
   line-height: 28px;
 }
 
+/* Tony's CSS: image max-width 17% of the 1210px container (≈206px) – the FSA 5-star card */
 .photo {
   align-self: center;
-  width: 100%;
-  max-width: 561px;
+  width: 17%;
+  min-width: 150px;
   margin-bottom: 20px;
-}
-.photo > span {
-  border-radius: 0;
 }
 
 .call {
